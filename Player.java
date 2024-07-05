@@ -8,11 +8,20 @@ public class Player {
 	// hand probably an arrayLIST
 	List<Card> hand = new ArrayList<Card>();
 	String name;
-	int score = 0;
+	int score;
 
 	
 	//
+	public Player() {
+		score = 0;
+	}
 	
+	public Player(String name) {
+		this.name = name;
+		score = 0;
+		
+		
+	}
 	
 	public void describe() {
 		
@@ -23,43 +32,30 @@ public class Player {
 			// blah blah blah something something
 		}
 			
-	}
+	}	
 		
-		
-	public void flip() {
-			
+	public Card flip() {
+		return hand.remove(0);
+				
 	}
 		
 	// potential errors until later, gotta fix this deck?
+	// I don't think that I need the deck input
+	// I am required to have them
 	public void draw(Deck deck) {
-		hand.add(deck.draw(deck));
+		hand.add(deck.draw());
 	}
 		
 		
 	public void incrementScore() {
 			score = score +1;
 	}
-	
-	
-	public void getHand() {
-		
-	}
-	
-	public void setHand() {
-		
-	}
-	
+
 	
 	public int getScore() {
 		
 		return score;
 	}
-	
-	public void setScore(int score) {
-		
-		this.score = score;
-	}
-	
 	
 	public String getName() {
 		

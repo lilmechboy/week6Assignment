@@ -4,8 +4,8 @@ public class Card {
 	
 	
 	
-	int value;
-	String name;
+	public int value;
+	public String name;
 	
 	public Card() {};
 
